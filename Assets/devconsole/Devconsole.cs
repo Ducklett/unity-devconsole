@@ -94,23 +94,31 @@ namespace ivy.devconsole
             {
                 if (!IsOpen)
                 {
-                    // open
-                    consoleCanvas.gameObject.SetActive(true);
-                    previousSelection = EventSystem.current.currentSelectedGameObject;
-                    if (previousSelection == input) previousSelection = null;
-                    openAction?.Invoke();
-                    input.text = "";
-                    input.Select();
+                    Open();
                 }
                 else
                 {
-                    // close
-                    consoleCanvas.gameObject.SetActive(false);
-                    closeAction?.Invoke();
-                    EventSystem.current.SetSelectedGameObject(previousSelection);
+                    Close();
                 }
             }
         }
+        public static void Open()
+        {
+            Instance.consoleCanvas.gameObject.SetActive(true);
+            Instance.previousSelection = EventSystem.current.currentSelectedGameObject;
+            if (Instance.previousSelection == Instance.input) Instance.previousSelection = null;
+            Instance.openAction?.Invoke();
+            Instance.input.text = "";
+            Instance.input.Select();
+        }
+
+        public static void Close()
+        {
+            Instance.consoleCanvas.gameObject.SetActive(false);
+            Instance.closeAction?.Invoke();
+            EventSystem.current.SetSelectedGameObject(Instance.previousSelection);
+        }
+
         public void OnConsoleOpen(Action a) => openAction = a;
         public void OnConsoleClose(Action a) => closeAction = a;
 
