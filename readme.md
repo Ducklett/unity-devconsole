@@ -21,7 +21,7 @@ When autocomplete suggestions pop up you can navigate them by pressing `tab`. Yo
 
 ## Adding custom commands
 
-Custom commands are just static functions with a `ConsoleCommand` attribute from the `ivy.devconsole` namespace, look at `TestCommands.cs` for some examples.
+Custom commands are just static functions with a `ConsoleCommand` attribute from the `Ivy.Devconsole` namespace, look at `TestCommands.cs` for some examples.
 
 ```C#
 [ConsoleCommand("add", description: "add two numbers together", example: "add 10 20")]

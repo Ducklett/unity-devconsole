@@ -8,7 +8,7 @@ using TMPro;
 using System.Linq;
 using System.Reflection;
 
-namespace ivy.devconsole
+namespace Ivy.Devconsole
 {
     public class Devconsole : MonoBehaviour
     {

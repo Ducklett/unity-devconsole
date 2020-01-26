@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-namespace ivy.devconsole
+namespace Ivy.Devconsole
 {
     [AddComponentMenu("")]
     public class ParameterSuggestions : MonoBehaviour

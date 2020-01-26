@@ -4,7 +4,7 @@ using UnityEngine.EventSystems;
 using TMPro;
 using System.Linq;
 
-namespace ivy.devconsole
+namespace Ivy.Devconsole
 {
     [AddComponentMenu("")]
     public class DevConsoleInput : MonoBehaviour, IDeselectHandler

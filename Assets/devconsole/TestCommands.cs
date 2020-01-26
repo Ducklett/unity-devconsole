@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using UnityEngine;
 
-namespace ivy.devconsole
+namespace Ivy.Devconsole
 {
     public class TestCommands
     {
